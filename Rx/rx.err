@@ -1,0 +1,9 @@
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\Libs\ds1307.c" Line 124(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 465(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 580(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 664(1,1): Condition always TRUE
+>>> Warning 205 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 765(1,1): Unsigned variable is never less than zero
+>>> Warning 205 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 1014(1,1): Unsigned variable is never less than zero
+>>> Warning 203 "rx.c" Line 224(1,1): Condition always TRUE
+      Memory usage:   ROM=45%      RAM=91% - 95%
+      0 Errors,  7 Warnings.

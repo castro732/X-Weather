@@ -1,0 +1,4 @@
+>>> Warning 224 "C:\Program Files (x86)\PICC\drivers\bootloader.h" Line 28(12,23): #warning   64
+>>> Warning 203 "serial.c" Line 22(1,1): Condition always TRUE
+      Memory usage:   ROM=0%      RAM=1% - 1%
+      0 Errors,  2 Warnings.

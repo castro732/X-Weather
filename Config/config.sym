@@ -1,0 +1,306 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     rs232_errors
+006     i
+007     control
+008     pressed
+009     config
+00A     confpos
+00B     conftype
+00C     selconf
+00D     up
+00E     lastup
+00F     down
+010     lastdown
+011     enter
+012     lastenter
+013     left
+014     lastleft
+015     lastright
+016     right
+017-024 MENUTITLE
+025-032 MENU1
+033-042 MENU2
+043-04C MENU2ITEM1
+04D-058 MENU2ITEM2
+059-061 MENU3
+062-06A MENU3ITEM1
+06B-074 MENU3ITEM2
+075-07F MENU4
+080-085 MENU4ITEM1
+086-08C MENU4ITEM2
+08D-094 MENU4ITEM3
+095-097 dia
+098-09A mes
+09B-09D ao
+09E-0A0 hora
+0A1-0A3 min
+0A4-0A6 aop
+0A7-0A8 UniTemp
+0A9-0AC UniPres
+0AD-0B1 UniVel
+0B2-4B1 displayData
+4B2-4B3 strtok.save
+4B4-4B7 _Randseed
+4B8     @delay_ms1.P1
+4B8     glcd_init.mode
+4B8     menu_submenu.menu
+4B9     auxdia
+4B9     menu_select.item
+4B9     menu_submenu.@SCRATCH1
+4BA     auxdia
+4BA     menu_select.menu
+4BA     menu_submenu.@SCRATCH2
+4BB     auxmes
+4BB     menu_entrar.tb
+4BC     auxmes
+4BC     menu_entrar.color
+4BD     auxao
+4BD     menu_entrar.@SCRATCH1
+4BE     auxao
+4BE     menu_entrar.@SCRATCH2
+4BF     auxhora
+4C0     auxhora
+4C1     auxmin
+4C2     auxmin
+4C3     glcd_rect.x1
+4C3-4C6 itoa.num
+4C3     glcd_update.i
+4C3     glcd_bar.x1
+4C3     glcd_text57.x
+4C3-4C4 atoi.s
+4C3     glcd_fillScreen.color
+4C3     menu_timemenu.@SCRATCH1
+4C4     glcd_update.j
+4C4     glcd_rect.y1
+4C4     glcd_bar.y1
+4C4     glcd_fillScreen.data
+4C4     glcd_text57.y
+4C4     menu_timemenu.@SCRATCH2
+4C5-4C6 glcd_text57.textptr
+4C5-4C6 glcd_fillScreen.p1
+4C5     atoi.result
+4C5-4C6 glcd_update.p1
+4C5     glcd_bar.x2
+4C5     glcd_rect.x2
+4C6     glcd_rect.y2
+4C6     atoi.sign
+4C6     glcd_bar.y2
+4C7     glcd_bar.width
+4C7     atoi.base
+4C7     glcd_text57.size
+4C7     itoa.base
+4C7-4C8 glcd_update.p2
+4C7     glcd_rect.fill
+4C7-4C8 glcd_fillScreen.p2
+4C8-4C9 itoa.s
+4C8     glcd_rect.color
+4C8     atoi.index
+4C8     glcd_text57.color
+4C8     glcd_bar.color
+4C9-4CA glcd_fillScreen.i
+4C9     glcd_text57.j
+4C9     atoi.c
+4C9     glcd_bar.half_width
+4C9     i
+4C9     glcd_update.@SCRATCH1
+4CA     glcd_writeByte.side
+4CA-4CB glcd_bar.dy
+4CA     @MUL88.P1
+4CA     xmin
+4CA     glcd_text57.k
+4CA-4CD itoa.temp
+4CA     atoi.@SCRATCH1
+4CB     glcd_text57.l
+4CB     xmax
+4CB     @MUL88.P1
+4CB     glcd_writeByte.data
+4CB     glcd_fillScreen.@SCRATCH1
+4CB     atoi.@SCRATCH2
+4CC     glcd_text57.m
+4CC-4CD glcd_bar.dx
+4CC     ymin
+4CC     glcd_fillScreen.@SCRATCH2
+4CD-4D1 glcd_text57.pixelData
+4CD     ymax
+4CE     glcd_line.x1
+4CE     itoa.i
+4CE     glcd_bar.addx
+4CF     itoa.sign
+4CF     glcd_line.y1
+4CF     glcd_bar.addy
+4D0     itoa.cnt
+4D0     glcd_bar.j
+4D0     glcd_line.x2
+4D1     glcd_line.y2
+4D1-4D2 glcd_bar.p
+4D1     itoa.c
+4D2     glcd_line.color
+4D2-4D5 @MUL3232.P1
+4D2     glcd_text57.@SCRATCH1
+4D2     itoa.@SCRATCH1
+4D3-4D4 glcd_bar.diff
+4D3-4D4 glcd_line.dy
+4D3     glcd_text57.@SCRATCH2
+4D3     itoa.@SCRATCH2
+4D4     glcd_text57.@SCRATCH3
+4D4     itoa.@SCRATCH3
+4D5-4D6 glcd_line.dx
+4D5-4D6 glcd_bar.c1
+4D5     glcd_text57.@SCRATCH4
+4D5     itoa.@SCRATCH4
+4D6-4D9 @DIVS3232.P1
+4D6-4D9 @MUL3232.P2
+4D6     glcd_text57.@SCRATCH5
+4D6     itoa.@SCRATCH5
+4D7     glcd_line.addx
+4D7-4D8 glcd_bar.c2
+4D7     itoa.@SCRATCH6
+4D8     glcd_line.addy
+4D8     itoa.@SCRATCH7
+4D9     glcd_bar.i
+4D9-4DA glcd_line.p
+4D9     itoa.@SCRATCH8
+4DA-4DB temp
+4DA-4DD @DIVS3232.P1
+4DA     @MUL3232.@SCRATCH1
+4DB-4DC glcd_line.diff
+4DB     @MUL3232.@SCRATCH2
+4DC-4DD temp
+4DC     @MUL3232.@SCRATCH3
+4DD     glcd_line.i
+4DD     @MUL3232.@SCRATCH4
+4DE     temp
+4DE     glcd_line.@SCRATCH1
+4DE     @MUL3232.@SCRATCH5
+4DE     @DIVS3232.@SCRATCH1
+4DF     temp
+4DF     @MUL3232.@SCRATCH6
+4DF     @DIVS3232.@SCRATCH2
+4E0     glcd_bar.@SCRATCH1
+4E0     @DIVS3232.@SCRATCH3
+4E1     glcd_pixel.x
+4E1     glcd_bar.@SCRATCH2
+4E1     @DIVS3232.@SCRATCH4
+4E2     glcd_pixel.y
+4E2     glcd_bar.@SCRATCH3
+4E2     @DIVS3232.@SCRATCH5
+4E3     glcd_pixel.color
+4E3     glcd_bar.@SCRATCH4
+4E3     @DIVS3232.@SCRATCH6
+4E4-4E5 glcd_pixel.p
+4E4-4E5 @MULS1616.P1
+4E6-4E7 glcd_pixel.temp
+4E6-4E7 @MULS1616.P1
+4E8     glcd_pixel.@SCRATCH1
+4E8     @MULS1616.@SCRATCH1
+4E9     glcd_pixel.@SCRATCH2
+4E9     @MULS1616.@SCRATCH2
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+04B0  @delay_ms1
+0408  glcd_init
+0350  glcd_update
+04DA  glcd_pixel
+02F6  glcd_fillScreen
+02B6  glcd_writeByte
+0004  FONT
+0114  FONT2
+0B4C  glcd_line
+157A  glcd_rect
+079E  glcd_bar
+074A  @MULS1616
+1646  @MUL88
+0596  glcd_text57
+1696  atoi
+196C  itoa
+1838  @MUL3232
+1896  @DIVS3232
+0E48  readbuttons
+0C8A  menu_entrar
+0EAE  menu_select
+1534  @goto11693
+1556  @goto11736
+28FC  menu_submenu
+2C64  @goto11757
+0200  @const507
+0212  @const508
+0224  @const509
+0238  @const510
+024E  @const511
+0262  @const512
+0278  @const513
+2C86  menu_mainmenu
+1B50  menu_timemenu
+02B4  @const515
+028C  @const525
+02A0  @const526
+28CE  @goto12074
+0D16  menu_drawmain
+2D14  MAIN
+2D14  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\MrDarkness\X-Weather\Config\
+
+Project Files:
+    config.c
+    config.h
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\HDM64GS12.c
+    graphics.c
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+    menu.c
+
+Units:
+    C:\Users\MrDarkness\X-Weather\Config\config (main)
+
+Compiler Settings:
+    Processor:      PIC18F4680
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      config.err
+    Ext Symbols: config.esym
+    INHX32:      config.hex
+    Symbols:     config.sym
+    List:        config.lst
+    Debug/COFF:  config.cof
+    Project:     config.PJT
+    Call Tree:   config.tre
+    Statistics:  config.sta

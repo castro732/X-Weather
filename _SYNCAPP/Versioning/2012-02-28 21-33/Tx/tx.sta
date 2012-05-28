@@ -1,0 +1,95 @@
+
+ROM used: 7360 (11%)
+          7364 (11%) including unused fragments
+
+          2 Average locations per line
+          12 Average locations per statement
+
+RAM used: 65 (2%) at main() level
+          153 (5%) worst case
+
+Stack used: 7 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  136    30   5  tx.c
+   33     0   0  tx.h
+  461     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+   42     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\bootloader.h
+  348    83  14  ..\..\..\..\Program Files (x86)\PICC\drivers\LCD.C
+ 2172   260  43  ..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+   37     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+  409   121  20  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+  328   105  18  bmp085.c
+    7     0   0  bmp085.h
+----- -----
+ 4029   599 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     38   0   1             @delay_ms1
+0     28   0   1             @I2C_WRITEU_1
+0     28   0   1             @I2C_READU_1
+0     30   0   0             @const83
+0     74   1   3   751  4.5  lcd_read_byte
+0     82   1   2   254  3.7  lcd_read_nibble
+0     64   0   1   391  2.4  lcd_send_nibble
+0     64   0   3   313  3.4  lcd_send_byte
+0    104   1   2   660  4.9  lcd_init
+0     34   0   4   186  5.5  lcd_gotoxy
+0     68   0   1   272  4.1  lcd_putc
+0    120   1  10             @FLT
+0     56   0   4             @SFTOI
+0     54   0   2             @ITOF
+0    346   2  14             @DIVFF
+0    618   4  16             @ADDFF
+0    242   2  11             @MULFF
+0     72   0   2             @SITOF
+0    144   1   8   592  4.5  bmp085Read2Bytes
+0    158   1   0   367  1.9  BMP085_Calibration
+0     46   0   0   127  1.7  bmp085ReadTemp
+0     46   0   0   172  3.1  bmp085ReadPressure
+0   2786  19  72  2946  7.0  bmp085Convert
+0     52   0   4             @DTOF
+0     82   1   6             @MULS1616
+0      6   0   0     5  1.0  EXT_isr
+0      6   0   0     5  1.0  RDA_isr
+0    450   3  13  1024  4.0  MAIN
+0     12   0   0             @const394
+0     32   0   2             @PSTRINGC_101
+0     62   0   2             @PRINTF_X_101
+0    122   1  13             @DIV3232
+0    302   2  13             @PRINTF_L32D_9600_31766_31767FP
+0    256   2  12             @PRINTF_L32D_9600_31766_31767
+0     12   0   0             @const416
+0      6   0   0             @const417
+0    302   2  13             @PRINTF_L32D_101FP
+0      2   0   0             @const422
+0     12   0   0             @const423
+0      6   0   0             @const424
+0    174   1  12             @PRINTF_L32U_101
+0      4   0   0             @const428
+
+Program metrics:
+    Functions               15
+    Statements              599
+    Comments                822
+    Volume (V)              12420
+    Difficilty (D)          51.1
+    Effort to implement (E) 634958
+    Time to implement (T)   9 hours, 48 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   8
+    Maintainability (MI)    32
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-004FE     0  1280  
+00500-00506     4  4  
+00508-005A0   154  0  
+005A2-0FFFE  7202  56892  
+
+
+

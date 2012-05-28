@@ -1,0 +1,5 @@
+>>> Warning 203 "rx.c" Line 115(1,1): Condition always TRUE
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Rx\rx.h" Line 30(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "rx.c" Line 110(16,18): Variable never used:   tt
+      Memory usage:   ROM=5%      RAM=2% - 4%
+      0 Errors,  3 Warnings.

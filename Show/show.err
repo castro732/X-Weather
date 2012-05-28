@@ -1,0 +1,4 @@
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Show\show.h" Line 30(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "show.c" Line 45(21,28): Variable never used:   xzatlcd
+      Memory usage:   ROM=5%      RAM=31% - 33%
+      0 Errors,  2 Warnings.

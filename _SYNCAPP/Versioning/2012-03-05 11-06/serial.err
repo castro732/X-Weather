@@ -1,0 +1,4 @@
+>>> Warning 203 "serial.c" Line 21(1,1): Condition always TRUE
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\serial.h" Line 12(5,8): Variable never used:   rs232_errors
+      Memory usage:   ROM=0%      RAM=1% - 1%
+      0 Errors,  2 Warnings.

@@ -1,0 +1,203 @@
+CCS PCH C Compiler, Version 4.104, 5967               05-mar-12 10:56
+
+               Filename: C:\Users\MrDarkness\X-Weather\serial.lst
+
+               ROM used: 254 bytes (0%)
+                         Largest free fragment is 63998
+               RAM used: 25 (1%) at main() level
+                         27 (1%) worst case
+               Stack:    3 worst case (1 in main + 2 for interrupts)
+
+*
+00500:  GOTO   05BC
+*
+00508:  MOVWF  04
+0050A:  MOVFF  FD8,05
+0050E:  MOVFF  FE0,06
+00512:  MOVLB  0
+00514:  MOVFF  FE9,0C
+00518:  MOVFF  FEA,07
+0051C:  MOVFF  FE1,08
+00520:  MOVFF  FE2,09
+00524:  MOVFF  FD9,0A
+00528:  MOVFF  FDA,0B
+0052C:  MOVFF  FF3,12
+00530:  MOVFF  FF4,13
+00534:  MOVFF  FFA,14
+00538:  MOVFF  00,0E
+0053C:  MOVFF  01,0F
+00540:  MOVFF  02,10
+00544:  MOVFF  03,11
+00548:  BTFSS  F9D.5
+0054A:  GOTO   0554
+0054E:  BTFSC  F9E.5
+00550:  GOTO   05AC
+00554:  MOVFF  0E,00
+00558:  MOVFF  0F,01
+0055C:  MOVFF  10,02
+00560:  MOVFF  11,03
+00564:  MOVFF  0C,FE9
+00568:  MOVFF  07,FEA
+0056C:  BSF    07.7
+0056E:  MOVFF  08,FE1
+00572:  MOVFF  09,FE2
+00576:  MOVFF  0A,FD9
+0057A:  MOVFF  0B,FDA
+0057E:  MOVFF  12,FF3
+00582:  MOVFF  13,FF4
+00586:  MOVFF  14,FFA
+0058A:  MOVF   04,W
+0058C:  MOVFF  06,FE0
+00590:  MOVFF  05,FD8
+00594:  RETFIE 0
+.................... #if defined(__PCH__) 
+.................... #include <serial.h>         // Headers 
+.................... #include <18F4680.h> 
+.................... //////// Standard Header file for the PIC18F4680 device //////////////// 
+.................... #device PIC18F4680 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+....................  
+.................... #FUSES MCLR                     //Master Clear pin enabled 
+.................... //#FUSES STVREN                   //Stack full/underflow will cause reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES HS 
+....................  
+....................  
+.................... #use delay(clock=8000000) 
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,errors) 
+00596:  BTFSS  F9E.5
+00598:  BRA    0596
+0059A:  MOVFF  FAB,17
+0059E:  MOVFF  FAE,01
+005A2:  BTFSS  17.1
+005A4:  BRA    05AA
+005A6:  BCF    FAB.4
+005A8:  BSF    FAB.4
+005AA:  RETLW  00
+....................  
+.................... #endif 
+.................... #include <bootloader.h> // Bootloader 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////                       BOOTLOADER.H                                //// 
+.................... ////                                                                   //// 
+.................... ////  This include file must be included by any application loaded     //// 
+.................... ////  by the example bootloader (ex_bootloader.c).                     //// 
+.................... ////                                                                   //// 
+.................... ////  The directives in this file relocate the reset and interrupt     //// 
+.................... ////  vectors as well as reserving space for the bootloader.           //// 
+.................... ////                                                                   //// 
+.................... ////  LOADER_END and LOADER_SIZE may need to be adjusted for a         //// 
+.................... ////  specific chip and bootloader.                                    //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2004 Custom Computer Services           //// 
+.................... //// This source code may only be used by licensed users of the CCS    //// 
+.................... //// C compiler.  This source code may only be distributed to other    //// 
+.................... //// licensed users of the CCS C compiler.  No other use,              //// 
+.................... //// reproduction or distribution is permitted without written         //// 
+.................... //// permission.  Derivative programs created using this software      //// 
+.................... //// in object code form are not restricted in any way.                //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+....................  
+....................  
+.................... #if defined(__PCM__) 
+....................    #define LOADER_END   0x1FF 
+.................... 	#define LOADER_SIZE	0x1BF 
+.................... #elif defined(__PCH__) 
+....................    #define LOADER_END   0x4FF 
+.................... 	#define LOADER_SIZE	0x3FF 
+.................... #endif 
+....................  
+.................... #ifndef _bootloader 
+....................  
+.................... #if defined(__PCM__) 
+....................    #build(reset=LOADER_END+1, interrupt=LOADER_END+5) 
+.................... #elif defined(__PCH__) 
+....................    #build(reset=LOADER_END+1, interrupt=LOADER_END+9) 
+.................... #endif 
+....................  
+.................... #org 0, LOADER_END {} 
+....................  
+.................... #endif 
+....................  
+....................  
+.................... int r=0; 
+.................... #INT_RDA 
+.................... void rda_isr() 
+.................... { 
+....................    int t; 
+....................     
+....................    t = getc(); 
+005AC:  RCALL  0596
+005AE:  MOVFF  01,1A
+....................    r = 1; 
+005B2:  MOVLW  01
+005B4:  MOVWF  18
+.................... } 
+....................  
+005B6:  BCF    F9E.5
+005B8:  GOTO   0554
+.................... void main() 
+.................... { 
+005BC:  CLRF   FF8
+005BE:  BCF    FD0.7
+005C0:  BSF    07.7
+005C2:  CLRF   FEA
+005C4:  CLRF   FE9
+005C6:  BCF    FB8.3
+005C8:  MOVLW  0C
+005CA:  MOVWF  FAF
+005CC:  MOVLW  A2
+005CE:  MOVWF  FAC
+005D0:  MOVLW  90
+005D2:  MOVWF  FAB
+005D4:  CLRF   18
+005D6:  MOVF   FC1,W
+005D8:  ANDLW  C0
+005DA:  IORLW  0F
+005DC:  MOVWF  FC1
+005DE:  MOVLW  07
+005E0:  MOVWF  FB4
+005E2:  CLRF   17
+....................     
+....................     
+....................    while (1) 
+....................    { 
+....................       while (kbhit()) 
+....................       { 
+005E4:  BTFSS  F9E.5
+005E6:  BRA    05F4
+....................          int a; 
+....................          a = getc(); 
+005E8:  RCALL  0596
+005EA:  MOVFF  01,19
+....................          r = 1; 
+005EE:  MOVLW  01
+005F0:  MOVWF  18
+....................       } 
+005F2:  BRA    05E4
+....................       if(r==1) 
+005F4:  DECFSZ 18,W
+005F6:  BRA    05FE
+....................          { 
+....................             output_toggle(PIN_C2); 
+005F8:  BCF    F94.2
+005FA:  BTG    F8B.2
+....................             r = 0; 
+005FC:  CLRF   18
+....................          } 
+....................    } 
+005FE:  BRA    05E4
+.................... } 
+00600:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C200   HS IESO FCMEN
+   Word  2: 1E1E   BROWNOUT NOWDT BORV21 PUT WDT32768
+   Word  3: 8600   PBADEN LPT1OSC MCLR
+   Word  4: 00B1   STVREN NODEBUG NOLVP NOXINST BBSIZ4K
+   Word  5: C00F   NOPROTECT NOCPD NOCPB
+   Word  6: E00F   NOWRT NOWRTD NOWRTC NOWRTB
+   Word  7: 400F   NOEBTR NOEBTRB

@@ -1,0 +1,94 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     rs232_errors
+01A     r
+01B     rda_isr.t
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+05AE  @GETCH_BIU_1
+05C6  rda_isr
+05D6  MAIN
+05D6  @cinit1
+05FE  @cinit2
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\MrDarkness\X-Weather\
+
+Project Files:
+    serial.c                                                [05-mar-12 11:41  CRC=9A890E98]
+    serial.h                                                [05-mar-12 10:54  CRC=E4FBED27]
+    ..\..\..\Program Files (x86)\PICC\devices\18F4680.h     [09-nov-11 16:58  CRC=7A86241F]
+    ..\..\..\Program Files (x86)\PICC\drivers\bootloader.h  [06-ago-10 14:33  CRC=C93661DC]
+
+Source signature=8C77E396
+
+Units:
+    serial (main)
+
+Compiler Settings:
+    Processor:      PIC18F4680
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      serial.err
+    Ext Symbols: serial.esym
+    INHX32:      serial.hex
+    Symbols:     serial.sym
+    List:        serial.lst
+    Debug/COFF:  serial.cof
+    Project:     serial.PJT
+    Call Tree:   serial.tre
+    Statistics:  serial.STA

@@ -1,0 +1,17 @@
+>>> Warning 203 "tx.c" Line 140(1,1): Condition always TRUE
+>>> Warning 201 "tx.c" Line 186(1,1): Assignment inside relational expression
+>>> Warning 203 "tx.c" Line 244(1,1): Condition always TRUE
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Tx\tx.h" Line 32(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "tx.c" Line 37(5,7): Variable never used:   at
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 37(7,10): Variable never used:   but
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 37(11,14): Variable never used:   bup
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 38(6,11): Variable never used:   shift
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 269(12,16): Variable never used:   aux1
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 269(17,21): Variable never used:   aux2
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 269(22,26): Variable never used:   aux3
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Libs\bmp085.c" Line 269(27,31): Variable never used:   aux4
+>>> Warning 202 "tx.c" Line 159(18,23): Variable never used:   ttbmp
+>>> Warning 202 "tx.c" Line 163(18,23): Variable never used:   tpbmp
+>>> Warning 202 "tx.c" Line 167(18,23): Variable never used:   tabmp
+      Memory usage:   ROM=6%      RAM=4% - 5%
+      0 Errors,  15 Warnings.

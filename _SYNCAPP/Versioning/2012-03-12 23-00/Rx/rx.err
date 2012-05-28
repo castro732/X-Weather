@@ -1,0 +1,16 @@
+>>> Warning 224 "C:\Program Files (x86)\PICC\drivers\bootloader.h" Line 28(12,23): #warning   64
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 340(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 441(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\config\menu.c" Line 508(1,1): Condition always TRUE
+>>> Warning 203 "rx.c" Line 245(1,1): Condition always TRUE
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Rx\rx.h" Line 31(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "rx.c" Line 37(5,12): Variable never used:   confpos
+>>> Warning 202 "rx.c" Line 37(13,21): Variable never used:   conftype
+>>> Warning 202 "rx.c" Line 37(22,29): Variable never used:   selconf
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\imagenes.c" Line 68(15,18): Variable never used:   sun
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\imagenes.c" Line 79(15,20): Variable never used:   cloud
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\imagenes.c" Line 91(15,19): Variable never used:   rain
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\imagenes.c" Line 103(15,19): Variable never used:   snow
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Rx\show.c" Line 110(13,14): Variable never used:   n
+      Memory usage:   ROM=30%      RAM=53% - 59%
+      0 Errors,  14 Warnings.

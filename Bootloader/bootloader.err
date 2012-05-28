@@ -1,0 +1,3 @@
+>>> Warning 224 "C:\Program Files (x86)\PICC\drivers\bootloader.h" Line 28(12,23): #warning   64
+      Memory usage:   ROM=1%      RAM=2% - 4%
+      0 Errors,  1 Warnings.

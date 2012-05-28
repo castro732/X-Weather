@@ -1,0 +1,37 @@
+[PROJECT]
+Target=C:\Users\MrDarkness\X-Weather\Rx\rx.hex
+Development_Mode=
+Processor_Text=PIC18F4680
+ToolSuite=CCS
+Processor=0x4680
+[C:\Users\MrDarkness\X-Weather\Rx\rx]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=C:\Users\MrDarkness\X-Weather\Rx\rx.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=C:\Users\MrDarkness\X-Weather\Rx\rx
+[Opened Files]
+1=rx.c
+2=rx.h
+3=..\..\..\..\Program Files (x86)\PICC\drivers\graphics.c
+4=..\imagenes.c
+5=../config/menu.c
+6=..\serial.c
+7=../HDM64GS12.c
+8=show.c
+9=
+10=
+11=
+12=..\Extended_GLCD.c
+13=..\Bitmap.h
+14=..\imagenes.c
+15=

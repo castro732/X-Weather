@@ -1,0 +1,48 @@
+
+ROM used: 254 (0%)
+          258 (0%) including unused fragments
+
+          0 Average locations per line
+          21 Average locations per statement
+
+RAM used: 25 (1%) at main() level
+          27 (1%) worst case
+
+Stack used: 3 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   35    12 100  serial.c
+   13     0   0  serial.h
+  461     0   0  ..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+   42     0   0  ..\..\..\Program Files (x86)\PICC\drivers\bootloader.h
+----- -----
+  551    12 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     22   4   0  2303 12.2  @GETCH_BIU_1
+0     16   3   1    50  1.5  rda_isr
+0     70  14   0   167  3.1  MAIN
+
+Program metrics:
+    Functions               3
+    Statements              12
+    Comments                122
+    Volume (V)              2780
+    Difficilty (D)          17.3
+    Effort to implement (E) 48052
+    Time to implement (T)   44 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   11
+    Maintainability (MI)    90
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-004FE     0  1280  
+00500-00506     4  4  
+00508-00594   142  0  
+00596-0FFFE   108  63998  
+
+
+

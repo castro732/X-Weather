@@ -1,0 +1,75 @@
+
+ROM used: 3262 (5%)
+          3266 (5%) including unused fragments
+
+          1 Average locations per line
+          6 Average locations per statement
+
+RAM used: 65 (2%) at main() level
+          120 (4%) worst case
+
+Stack used: 8 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  196    73  14  rx.c
+   31     0   0  rx.h
+  461     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+   42     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\bootloader.h
+  348    83  16  ..\..\..\..\Program Files (x86)\PICC\drivers\LCD.C
+   37     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+  409     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+ 1273   359  70  ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+----- -----
+ 2853   515 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     38   1   1             @delay_ms1
+0     24   0   0             @GETCH_BIU_1
+0     30   0   0             @const82
+0     74   1   3   751  4.5  lcd_read_byte
+0     82   1   2   254  3.7  lcd_read_nibble
+0     64   1   1   391  2.4  lcd_send_nibble
+0     64   1   3   313  3.4  lcd_send_byte
+0    104   2   2   660  4.9  lcd_init
+0     36   1   4   186  5.5  lcd_gotoxy
+0     68   1   1   272  4.1  lcd_putc
+0     82   1   6             @MULS1616
+0    490   8  11  1817 10.4  atol
+0    670  10  16  1882 11.0  atoi32
+0     66   1   5   169  3.6  RDA_isr
+0     40   1   2   149  4.7  bgetc
+0    520   8   2  2285  7.4  MAIN
+0      8   0   0   436  7.9  @const386
+0     32   0   2             @PSTRINGC_100
+0    236   4   9   224  6.7  @PRINTF_LD_100
+0      2   0   0             @const391
+0     10   0   0   592  4.5  @const392
+0    122   2  13   127  1.7  @DIV3232
+0    250   4  12   172  3.1  @PRINTF_L32D_100
+0      4   0   0  2946  7.0  @const399
+
+Program metrics:
+    Functions               18
+    Statements              515
+    Comments                811
+    Volume (V)              21302
+    Difficilty (D)          98.1
+    Effort to implement (E) 2089258
+    Time to implement (T)   32 hours, 14 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   43
+    Maintainability (MI)    38
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-004FE     0  1280  
+00500-00506     4  4  
+00508-00594   142  0  
+00596-0FFFE  3116  60990  
+
+
+

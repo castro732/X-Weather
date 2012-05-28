@@ -1,0 +1,89 @@
+
+ROM used: 12176 (19%)
+          12176 (19%) including unused fragments
+
+          3 Average locations per line
+          11 Average locations per statement
+
+RAM used: 1208 (36%) at main() level
+          1258 (38%) worst case
+
+Stack used: 7 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  131     3   0  config.c
+   31     0   0  config.h
+  461     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+  351    78   7  ..\..\..\..\Program Files (x86)\PICC\drivers\HDM64GS12.c
+  629   204  18  graphics.c
+ 1273   359  32  ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+  840   492  43  menu.c
+----- -----
+ 4181  1136 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     42   0   1             @delay_ms1
+0    168   1   1   580  3.2  glcd_init
+0    184   1   7   609  5.4  glcd_update
+0    188   1   9   466  7.8  glcd_pixel
+0     90   0  10   317  4.7  glcd_fillScreen
+0     64   0   2   257  2.8  glcd_writeByte
+0    272   1   0   318  2.8  @const139
+0    236   1   0  1475  8.8  @const142
+0    318   1  17  1475  8.8  glcd_line
+0    204   1   6  1036  5.8  glcd_rect
+0    942   4  27  3023 11.1  glcd_bar
+0     84   0   6  3023 11.1  @MULS1616
+0     80   0   2  1822  8.6  @MUL88
+0    436   2  20  1618 11.9  glcd_text57
+0    418   2   9  1815 10.5  atoi
+0    484   2  23  1068 11.1  itoa
+0     94   0  14  1068 11.1  @MUL3232
+0    214   1  14  1542 12.4  @DIVS3232
+0    102   0   0   511  4.3  readbuttons
+0    140   1   4   370  2.4  menu_entrar
+0   1670   7   2  7255  4.0  menu_select
+0     34   0   0 10381  4.0  @goto11693
+0     36   0   0  2173  7.4  @goto11736
+0    872   4   3  3223  7.9  menu_submenu
+0     34   0   0  2639  7.8  @goto11757
+0     18   0   0  2308  5.4  @const507
+0     18   0   0 17153 10.6  @const508
+0     20   0   0   680  5.3  @const509
+0     22   0   0 17153 10.6  @const510
+0     20   0   0 17153 10.6  @const511
+0     22   0   0  2173  7.4  @const512
+0     20   0   0    43  1.1  @const513
+0    142   1   0   680  5.3  menu_mainmenu
+0   3454  14   2 17153 10.6  menu_timemenu
+0      2   0   0   902  1.9  @const515
+0     20   0   0    43  1.1  @const525
+0     20   0   0             @const526
+0     46   0   0             @goto12074
+0    306   1   0   902  1.9  menu_drawmain
+0    636   3   0    43  1.1  MAIN
+
+Program metrics:
+    Functions               37
+    Statements              1136
+    Comments                1135
+    Volume (V)              187233
+    Difficilty (D)          248.6
+    Effort to implement (E) 46546001
+    Time to implement (T)   718 hours, 18 minutes
+    Est Delivered Bugs (B)  43
+    Cyclomatic Complexity   336
+    Maintainability (MI)    106
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-0FFFE  12172  53360  
+
+
+

@@ -1,0 +1,11 @@
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\Config\menu.c" Line 316(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\Config\menu.c" Line 417(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\MrDarkness\X-Weather\Config\menu.c" Line 489(1,1): Condition always TRUE
+>>> Warning 204 "C:\Users\MrDarkness\X-Weather\Config\menu.c" Line 718(1,1): Condition always FALSE
+>>> Warning 202 "C:\Users\MrDarkness\X-Weather\Config\config.h" Line 30(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "config.c" Line 36(5,11): Variable never used:   config
+>>> Warning 202 "config.c" Line 37(5,12): Variable never used:   confpos
+>>> Warning 202 "config.c" Line 37(13,21): Variable never used:   conftype
+>>> Warning 202 "config.c" Line 37(22,29): Variable never used:   selconf
+      Memory usage:   ROM=19%      RAM=36% - 38%
+      0 Errors,  9 Warnings.

@@ -1,0 +1,67 @@
+/*
+      
+      
+      int8 h;
+      
+      lcd_putc("\fRX");
+      lcd_gotoxy(1,2);
+      delay_ms(2000);
+      if(kbhit())
+      {
+         
+         val = getc();
+         lcd_putc("Recibido: ");
+         printf(lcd_putc,"%c",val);
+         printf("%d",9);
+         delay_ms(2000);
+         
+      }
+      
+      continue;
+      
+      */
+	  
+	  //****************************************************//
+	  
+	  /*
+#INT_TIMER1
+void timer1done_isr(void)
+{
+   t1done += 1;
+   //lcd_putc("\fTimer Done\n");
+   
+   set_timer1(0);
+}
+
+#INT_EXT 
+void ext_isr(void) 
+{ 
+   tim=get_timer1();
+   tim = tim + (65536*t1done);
+   
+   vel = 9/(tim*0.000001);
+   
+   lcd_putc("\fInterrupcion\n");
+   
+   printf(lcd_putc,"%e",vel);
+   
+   t1done = 0;
+   
+   output_toggle(pin_A1);
+  
+   set_timer1(0);
+   
+} 
+*/
+
+/*
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
+
+   ext_int_edge(H_to_L); 
+   enable_interrupts(INT_TIMER1);
+   enable_interrupts(INT_EXT); 
+   enable_interrupts(GLOBAL); 
+
+   
+   set_timer1(0);
+*/

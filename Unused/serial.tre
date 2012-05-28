@@ -1,0 +1,6 @@
+ÀÄserial
+   ÃÄMAIN  0/60  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÀÄ??0??
+   ÀÄrda_isr  0/16  Ram=1
+      ÀÄ@GETCH_BIU_1  0/24  Ram=0

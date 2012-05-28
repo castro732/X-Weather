@@ -1,0 +1,210 @@
+CCS PCH C Compiler, Version 4.126d, 1               05-mar-12 11:41
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename: C:\Users\MrDarkness\X-Weather\serial.lst
+
+               ROM used: 270 bytes (0%)
+                         Largest free fragment is 63982
+               RAM used: 27 (1%) at main() level
+                         28 (1%) worst case
+               Stack:    2 worst case (0 in main + 2 for interrupts)
+
+*
+00500:  GOTO   05D6
+*
+00508:  MOVWF  04
+0050A:  MOVFF  FD8,05
+0050E:  MOVFF  FE0,06
+00512:  MOVLB  0
+00514:  MOVFF  FE9,0C
+00518:  MOVFF  FEA,07
+0051C:  MOVFF  FE1,08
+00520:  MOVFF  FE2,09
+00524:  MOVFF  FD9,0A
+00528:  MOVFF  FDA,0B
+0052C:  MOVFF  FF3,12
+00530:  MOVFF  FF4,13
+00534:  MOVFF  FFA,14
+00538:  MOVFF  FF5,15
+0053C:  MOVFF  FF6,16
+00540:  MOVFF  FF7,17
+00544:  MOVFF  00,0E
+00548:  MOVFF  01,0F
+0054C:  MOVFF  02,10
+00550:  MOVFF  03,11
+00554:  BTFSS  F9D.5
+00556:  GOTO   0560
+0055A:  BTFSC  F9E.5
+0055C:  GOTO   05C6
+00560:  MOVFF  0E,00
+00564:  MOVFF  0F,01
+00568:  MOVFF  10,02
+0056C:  MOVFF  11,03
+00570:  MOVFF  0C,FE9
+00574:  MOVFF  07,FEA
+00578:  BSF    07.7
+0057A:  MOVFF  08,FE1
+0057E:  MOVFF  09,FE2
+00582:  MOVFF  0A,FD9
+00586:  MOVFF  0B,FDA
+0058A:  MOVFF  12,FF3
+0058E:  MOVFF  13,FF4
+00592:  MOVFF  14,FFA
+00596:  MOVFF  15,FF5
+0059A:  MOVFF  16,FF6
+0059E:  MOVFF  17,FF7
+005A2:  MOVF   04,W
+005A4:  MOVFF  06,FE0
+005A8:  MOVFF  05,FD8
+005AC:  RETFIE 0
+.................... #if defined(__PCH__) 
+.................... #include <serial.h>         // Headers 
+.................... #include <18F4680.h> 
+.................... //////// Standard Header file for the PIC18F4680 device //////////////// 
+.................... #device PIC18F4680 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+....................  
+.................... #FUSES MCLR                     //Master Clear pin enabled 
+.................... //#FUSES STVREN                   //Stack full/underflow will cause reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES HS 
+....................  
+....................  
+.................... #use delay(clock=8000000) 
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,errors) 
+005AE:  BTFSS  F9E.5
+005B0:  BRA    05AE
+005B2:  MOVFF  FAB,19
+005B6:  MOVFF  FAE,01
+005BA:  BTFSS  19.1
+005BC:  BRA    05C2
+005BE:  BCF    FAB.4
+005C0:  BSF    FAB.4
+005C2:  GOTO   05C8 (RETURN)
+....................  
+.................... #endif 
+.................... #include <bootloader.h> // Bootloader 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////                       BOOTLOADER.H                                //// 
+.................... ////                                                                   //// 
+.................... ////  This include file must be included by any application loaded     //// 
+.................... ////  by the example bootloader (ex_bootloader.c).                     //// 
+.................... ////                                                                   //// 
+.................... ////  The directives in this file relocate the reset and interrupt     //// 
+.................... ////  vectors as well as reserving space for the bootloader.           //// 
+.................... ////                                                                   //// 
+.................... ////  LOADER_END and LOADER_SIZE may need to be adjusted for a         //// 
+.................... ////  specific chip and bootloader.                                    //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2004 Custom Computer Services           //// 
+.................... //// This source code may only be used by licensed users of the CCS    //// 
+.................... //// C compiler.  This source code may only be distributed to other    //// 
+.................... //// licensed users of the CCS C compiler.  No other use,              //// 
+.................... //// reproduction or distribution is permitted without written         //// 
+.................... //// permission.  Derivative programs created using this software      //// 
+.................... //// in object code form are not restricted in any way.                //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+....................  
+....................  
+.................... #if defined(__PCM__) 
+....................    #define LOADER_END   0x1FF 
+....................    #define LOADER_SIZE   0x1BF 
+.................... #elif defined(__PCH__) 
+....................    #define FLASH_SIZE getenv("FLASH_ERASE_SIZE") 
+....................    #warning FLASH_SIZE 
+....................    #if ((0x500 % FLASH_SIZE) == 0 )       //IF 0x500 is even flash boundary 
+....................       #define LOADER_END   0x4FF 
+....................       #define LOADER_SIZE  0x3FF 
+....................    #else                                  //ELSE, goto next even boundary 
+....................       #define LOADER_END   ((0x500+FLASH_SIZE-(0x500%FLASH_SIZE))-1) 
+....................       #define LOADER_SIZE  (LOADER_END-0x100) 
+....................    #endif 
+.................... #endif 
+....................  
+.................... #ifndef _bootloader 
+....................  
+.................... #if defined(__PCM__) 
+....................    #build(reset=LOADER_END+1, interrupt=LOADER_END+5) 
+.................... #elif defined(__PCH__) 
+....................    #build(reset=LOADER_END+1, interrupt=LOADER_END+9) 
+.................... #endif 
+....................  
+.................... #org 0, LOADER_END {} 
+....................  
+.................... #endif 
+....................  
+....................  
+.................... int r=0; 
+.................... #INT_RDA 
+.................... void rda_isr(void) 
+.................... { 
+....................    int t; 
+....................     
+....................    t = getc(); 
+005C6:  BRA    05AE
+005C8:  MOVFF  01,1B
+....................    r = 1; 
+005CC:  MOVLW  01
+005CE:  MOVWF  1A
+.................... } 
+....................  
+005D0:  BCF    F9E.5
+005D2:  GOTO   0560
+.................... void main() 
+.................... { 
+005D6:  CLRF   FF8
+005D8:  BCF    FD0.7
+005DA:  BSF    07.7
+005DC:  CLRF   FEA
+005DE:  CLRF   FE9
+005E0:  CLRF   19
+005E2:  BCF    FB8.3
+005E4:  MOVLW  0C
+005E6:  MOVWF  FAF
+005E8:  MOVLW  A2
+005EA:  MOVWF  FAC
+005EC:  MOVLW  90
+005EE:  MOVWF  FAB
+005F0:  CLRF   1A
+005F2:  MOVF   FC1,W
+005F4:  ANDLW  C0
+005F6:  IORLW  0F
+005F8:  MOVWF  FC1
+005FA:  MOVLW  07
+005FC:  MOVWF  FB4
+....................     
+....................    enable_interrupts(INT_RDA); 
+005FE:  BSF    F9D.5
+....................       enable_interrupts(GLOBAL); 
+00600:  MOVLW  C0
+00602:  IORWF  FF2,F
+....................    while (1) 
+....................    { 
+....................        
+....................       if(r==1) 
+00604:  DECFSZ 1A,W
+00606:  BRA    060E
+....................          { 
+....................             output_toggle(PIN_C2); 
+00608:  BCF    F94.2
+0060A:  BTG    F8B.2
+....................             r = 0; 
+0060C:  CLRF   1A
+....................          } 
+....................    } 
+0060E:  BRA    0604
+.................... } 
+00610:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C200   HS FCMEN IESO
+   Word  2: 1E1E   PUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 8600   PBADEN LPT1OSC MCLR
+   Word  4: 00B1   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

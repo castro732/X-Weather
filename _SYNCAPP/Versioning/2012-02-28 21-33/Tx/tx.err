@@ -1,0 +1,5 @@
+>>> Warning 203 "tx.c" Line 91(1,1): Condition always TRUE
+>>> Warning 202 "c:\users\mrdarkness\x-weather\tx\tx.h" Line 30(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "c:\users\mrdarkness\x-weather\tx\bmp085.c" Line 34(11,14): Variable never used:   bup
+      Memory usage:   ROM=11%      RAM=2% - 5%
+      0 Errors,  3 Warnings.

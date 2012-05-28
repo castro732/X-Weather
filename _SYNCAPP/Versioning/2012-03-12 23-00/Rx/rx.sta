@@ -1,0 +1,121 @@
+
+ROM used: 19628 (30%)
+          19632 (30%) including unused fragments
+
+          4 Average locations per line
+          14 Average locations per statement
+
+RAM used: 1778 (53%) at main() level
+          1960 (59%) worst case
+
+Stack used: 9 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  388   155  11  rx.c
+   32     0   0  rx.h
+  472     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+   49     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\bootloader.h
+  352    78   6  ..\HDM64GS12.c
+  676   167  12  ..\graphics.c
+  187    29   2  ..\..\..\..\Program Files (x86)\PICC\drivers\internal_eeprom.c
+   37     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+  409     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   32     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+ 1273   359  26  ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+  860   487  35  ..\config\menu.c
+  251   116   8  show.c
+  113     0   0  ..\imagenes.c
+----- -----
+ 5159  1391 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     42   0   1             @delay_ms1
+0     24   0   0             @GETCH_BIU_1
+0    170   0   1   580  3.2  glcd_init
+0    184   0   7   609  5.4  glcd_update
+0    188   0   9   466  7.8  glcd_pixel
+0     90   0  10   317  4.7  glcd_fillScreen
+0     64   0   2   257  2.8  glcd_writeByte
+0    272   1   0             @const143
+0    236   1   0             @const146
+0    318   1  17  1475  8.8  glcd_line
+0    194   0   6  1036  5.8  glcd_rect
+0    944   2  27  3023 11.1  glcd_bar
+0     84   0   6             @MULS1616
+0     80   0   2             @MUL88
+0    426   1  20  1555 11.0  glcd_text57
+0    114   0   9   272  5.5  strcat
+0    418   1   9  1815 10.5  atoi
+0    500   1  11  1817 10.4  atol
+0    674   2  16  1882 11.0  atoi32
+0    464   1  27  1068 11.1  itoa
+0     94   0  14             @MUL3232
+0    234   1  14             @DIVS3232
+0    102   0   0   511  4.3  readbuttons
+0    148   0   4   370  2.4  menu_entrar
+0   1664   4   2  7255  4.0  menu_select
+0     34   0   0             @goto11745
+0     36   0   0             @goto11788
+0    778   2   3  3259  7.9  menu_submenu
+0     34   0   0             @goto11809
+0     18   0   0             @const533
+0     18   0   0             @const534
+0     20   0   0             @const535
+0     20   0   0             @const536
+0     20   0   0             @const537
+0     22   0   0             @const538
+0     20   0   0             @const539
+0     94   0   0   514  5.7  menu_mainmenu
+0   3454   9   2 17140 10.1  menu_timemenu
+0      2   0   0             @const541
+0     20   0   0             @const551
+0     20   0   0             @const552
+0     46   0   0             @goto12120
+0    298   1   0   902  1.9  menu_drawmain
+0   1038   3   0             @const555
+0    178   0   7   648  5.8  glcd_showlogo
+0    488   1   2  1269  5.6  glcd_loadscreen
+0    358   1   1  1375  3.9  draw_sect
+0     36   0   0             @goto12279
+0    212   1   7   662  6.0  glcd_text_sec
+0     34   0   0             @goto12300
+0     74   0   5   192  3.6  RDA_isr
+0     10   0   0    22  1.2  EXT1_isr
+0     44   0   2   149  4.7  bgetc
+0     34   0   5   122  3.9  str_init
+0   3836  10   4  5572  8.1  MAIN
+0      2   0   0             @const639
+0      2   0   0             @const640
+0      2   0   0             @const641
+0      2   0   0             @const642
+0      2   0   0             @const643
+0      2   0   0             @const644
+0      2   0   0             @const645
+0     34   0   1             @SPRINTF
+0    148   0  13             @DIV3232
+0    226   1  13             @PRINTF_L32U_648FP
+
+Program metrics:
+    Functions               30
+    Statements              1391
+    Comments                1466
+    Volume (V)              85596
+    Difficilty (D)          188.7
+    Effort to implement (E) 16153773
+    Time to implement (T)   249 hours, 17 minutes
+    Est Delivered Bugs (B)  21
+    Cyclomatic Complexity   196
+    Maintainability (MI)    17
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-004FE     0  1280  
+00500-00506     4  4  
+00508-005B8   178  0  
+005BA-0FFFE  19446  44624  
+
+
+

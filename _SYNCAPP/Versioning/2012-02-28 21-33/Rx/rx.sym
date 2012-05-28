@@ -1,0 +1,201 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     rs232_errors
+017-036 buffer
+037     next_in
+038     next_out
+039-03A strtok.save
+03B-03E _Randseed
+03F     type
+040-041 auxi
+042-043 tt
+044-045 hh
+046-049 hhh
+04A-058 string
+059     i
+05A-05B @PRINTF_LD_100.P1
+05A-05B atoi32.s
+05A     bgetc.c
+05A-05B atol.s
+05A     lcd_init.i
+05A-05D @PRINTF_L32D_100.P1
+05A     MAIN.@SCRATCH1
+05A     @PSTRINGC_100.@SCRATCH1
+05B     lcd_init.@SCRATCH1
+05B     bgetc.@SCRATCH1
+05B     MAIN.@SCRATCH2
+05B     @PSTRINGC_100.@SCRATCH2
+05C-05D atol.result
+05C-05F atoi32.result
+05C     @PRINTF_LD_100.@SCRATCH1
+05D     @PRINTF_LD_100.@SCRATCH2
+05E     atol.sign
+05E     @PRINTF_LD_100.@SCRATCH3
+05E     @PRINTF_L32D_100.@SCRATCH1
+05F     atol.base
+05F     @PRINTF_LD_100.@SCRATCH4
+05F     @PRINTF_L32D_100.@SCRATCH2
+060     atol.index
+060     atoi32.sign
+060     @PRINTF_LD_100.@SCRATCH5
+060     @PRINTF_L32D_100.@SCRATCH3
+061     atoi32.base
+061     atol.c
+061     @PRINTF_LD_100.@SCRATCH6
+061     @PRINTF_L32D_100.@SCRATCH4
+062-063 @MULS1616.P1
+062     atoi32.index
+062     atol.@SCRATCH1
+062     @PRINTF_LD_100.@SCRATCH7
+062     @PRINTF_L32D_100.@SCRATCH5
+063     atoi32.c
+063     atol.@SCRATCH2
+063     @PRINTF_L32D_100.@SCRATCH6
+064-065 @MULS1616.P1
+064     atol.@SCRATCH3
+064     atoi32.@SCRATCH1
+064     @PRINTF_L32D_100.@SCRATCH7
+065     atoi32.@SCRATCH2
+065     @PRINTF_L32D_100.@SCRATCH8
+066     lcd_putc.c
+066-069 @DIV3232.P1
+066     @MULS1616.@SCRATCH1
+066     atoi32.@SCRATCH3
+067     @delay_ms1.P1
+067     lcd_gotoxy.x
+067     @MULS1616.@SCRATCH2
+067     atoi32.@SCRATCH4
+068     lcd_gotoxy.y
+068     atoi32.@SCRATCH5
+069     lcd_gotoxy.address
+069     atoi32.@SCRATCH6
+06A-06D @DIV3232.P1
+06A     lcd_gotoxy.@SCRATCH1
+06B     lcd_send_byte.address
+06C     lcd_send_byte.n
+06D     lcd_read_byte.low
+06D     lcd_send_byte.@SCRATCH1
+06E     lcd_read_byte.high
+06E     lcd_send_nibble.n
+06E     @DIV3232.@SCRATCH1
+06F     lcd_read_nibble.n
+06F     lcd_read_byte.@SCRATCH1
+06F     @DIV3232.@SCRATCH2
+070     lcd_read_nibble.@SCRATCH1
+070     @DIV3232.@SCRATCH3
+071     @DIV3232.@SCRATCH4
+072     @DIV3232.@SCRATCH5
+073     RDA_isr.t
+074     RDA_isr.@SCRATCH1
+075     RDA_isr.@SCRATCH2
+076     RDA_isr.@SCRATCH3
+077     RDA_isr.@SCRATCH4
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0626  @delay_ms1
+05B4  @GETCH_BIU_1
+0596  LCD_INIT_STRING
+06DE  lcd_read_byte
+068C  lcd_read_nibble
+064C  lcd_send_nibble
+0728  lcd_send_byte
+0768  lcd_init
+0A34  lcd_gotoxy
+0A58  lcd_putc
+07F8  @MULS1616
+084A  atol
+0BA8  atoi32
+05CC  RDA_isr
+07D0  bgetc
+0FBA  MAIN
+060E  @const386
+0A9C  @PSTRINGC_100
+0ABC  @PRINTF_LD_100
+0616  @const391
+0618  @const392
+0E46  @DIV3232
+0EC0  @PRINTF_L32D_100
+0622  @const399
+0FBA  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\MrDarkness\X-Weather\Rx\
+
+Project Files:
+    rx.c
+    rx.h
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F4680.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\bootloader.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\LCD.C
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+
+Units:
+    C:\Users\MrDarkness\X-Weather\Rx\rx (main)
+
+Compiler Settings:
+    Processor:      PIC18F4680
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      rx.err
+    Ext Symbols: rx.esym
+    INHX32:      rx.hex
+    Symbols:     rx.sym
+    List:        rx.lst
+    Debug/COFF:  rx.cof
+    Project:     rx.PJT
+    Call Tree:   rx.tre
+    Statistics:  rx.sta

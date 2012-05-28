@@ -1,0 +1,2 @@
+0.0.0.0	0	Tuso Unnamed Thread	0000000006F7E070	Info1	Sat Mar 17 15:13:44 2012	SoapSslSupport.cpp	110	CRYPTO_thread_cleanup()	Going to cleanup mutexes pool for OpenSSL.
+0.0.0.0	0	Tuso Unnamed Thread	0000000006F7E070	Info1	Sat Mar 17 15:13:44 2012	SoapSslSupport.cpp	136	CRYPTO_thread_cleanup()	Mutexes pool for OpenSSL successfully cleaned up for .39 mutexes.
